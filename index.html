@@ -15,6 +15,7 @@
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#programme">Programme</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
                 <li><a href="#equipe">Équipe</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -26,7 +27,7 @@
         <div class="container">
             <h1>Bienvenue chez ProTradeX</h1>
             <p>La plateforme de trading propriétaire pour les traders sérieux</p>
-            <button class="btn btn-primary" onclick="scrollToSection('contact')">Commencer</button>
+            <button class="btn btn-primary" onclick="scrollToSection('newsletter')">Commencer</button>
         </div>
     </section>
 
@@ -84,6 +85,32 @@
                     <h3>Trading Live</h3>
                     <p>Accès au capital de trading et début de vos opérations</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez Informé 📧</h2>
+                <p>Recevez les dernières actualités, stratégies de trading et conseils d'experts directement dans votre boîte mail</p>
+                
+                <form class="newsletter-form" id="newsletterForm" method="POST" action="https://formspree.io/f/xyzabc123">
+                    <div class="newsletter-input-group">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Entrez votre email" 
+                            required
+                            class="newsletter-input"
+                        >
+                        <button type="submit" class="btn btn-primary">S'abonner</button>
+                    </div>
+                    <p class="newsletter-note">✓ Pas de spam, désinscription facile à tout moment</p>
+                </form>
+
+                <div id="newsletterMessage" class="newsletter-message"></div>
             </div>
         </div>
     </section>
@@ -159,6 +186,7 @@
                 <a href="#contact">Contact</a>
                 <a href="#services">Services</a>
                 <a href="#equipe">Équipe</a>
+                <a href="#newsletter">Newsletter</a>
             </div>
         </div>
     </footer>
