@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTradeX - Proprietary Trading Firm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">ProTradeX</div>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h1>Bienvenue chez ProTradeX</h1>
+            <p>La plateforme de trading propriétaire pour les traders sérieux</p>
+            <button class="btn btn-primary" onclick="scrollToSection('contact')">Commencer</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Capital de Trading</h3>
+                    <p>Accédez à un capital de trading jusqu'à 500 000€ avec des conditions compétitives</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🎓</div>
+                    <h3>Formation</h3>
+                    <p>Programme de formation complet en trading, analyse technique et gestion des risques</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Sécurité</h3>
+                    <p>Plateforme sécurisée avec outils avancés et support 24/7</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💰</div>
+                    <h3>Profit Sharing</h3>
+                    <p>Partage des profits avantageux jusqu'à 80% pour nos meilleurs traders</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programme Section -->
+    <section id="programme" class="programme">
+        <div class="container">
+            <h2>Notre Programme</h2>
+            <div class="programme-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Candidature</h3>
+                    <p>Remplissez notre formulaire en ligne avec vos informations</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Évaluation</h3>
+                    <p>Test de trading sur démo pour évaluer vos compétences</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Formation</h3>
+                    <p>Programme intensif de 4 semaines avec mentors expérimentés</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Trading Live</h3>
+                    <p>Accès au capital de trading et début de vos opérations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe Section -->
+    <section id="equipe" class="equipe">
+        <div class="container">
+            <h2>Notre Équipe</h2>
+            <div class="equipe-grid">
+                <div class="team-member">
+                    <div class="member-avatar">JD</div>
+                    <h3>Jean Dupont</h3>
+                    <p>Fondateur & CEO</p>
+                    <small>15+ ans d'expérience en trading</small>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">MB</div>
+                    <h3>Marie Bernard</h3>
+                    <p>Directrice Trading</p>
+                    <small>Spécialiste en forex et indices</small>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">PC</div>
+                    <h3>Pierre Clément</h3>
+                    <p>Mentor Principal</p>
+                    <small>Expert en gestion des risques</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Traders actifs</p>
+            </div>
+            <div class="stat">
+                <h3>€2.5M</h3>
+                <p>Capital géré</p>
+            </div>
+            <div class="stat">
+                <h3>85%</h3>
+                <p>Taux de réussite</p>
+            </div>
+            <div class="stat">
+                <h3>24/7</h3>
+                <p>Support client</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Nous Contacter</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <input type="tel" placeholder="Votre téléphone">
+                <textarea placeholder="Votre message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ProTradeX. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="#contact">Contact</a>
+                <a href="#services">Services</a>
+                <a href="#equipe">Équipe</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
