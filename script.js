@@ -24,6 +24,60 @@ function handleSubmit(event) {
     form.reset();
 }
 
+// Handle newsletter submission
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleNewsletterSubmit();
+        });
+    }
+});
+
+function handleNewsletterSubmit() {
+    const email = document.getElementById('newsletterEmail').value;
+    const messageDiv = document.getElementById('newsletterMessage');
+    
+    // Validation d'email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(email)) {
+        messageDiv.textContent = '❌ Veuillez entrer un email valide';
+        messageDiv.className = 'newsletter-message error';
+        return;
+    }
+    
+    // Stockage local de l'email (pour démonstration)
+    let emails = JSON.parse(localStorage.getItem('newsletter_emails')) || [];
+    
+    if (emails.includes(email)) {
+        messageDiv.textContent = '⚠️ Vous êtes déjà abonné avec cet email';
+        messageDiv.className = 'newsletter-message error';
+        return;
+    }
+    
+    // Ajouter l'email à la liste
+    emails.push(email);
+    localStorage.setItem('newsletter_emails', JSON.stringify(emails));
+    
+    // Afficher le message de succès
+    messageDiv.textContent = '✓ Merci pour votre abonnement! Vérifiez votre email.';
+    messageDiv.className = 'newsletter-message success';
+    
+    // Réinitialiser le formulaire
+    document.getElementById('newsletterForm').reset();
+    
+    // Effacer le message après 5 secondes
+    setTimeout(() => {
+        messageDiv.textContent = '';
+        messageDiv.className = 'newsletter-message';
+    }, 5000);
+    
+    // Log pour vérification
+    console.log('Emails inscrits à la newsletter:', emails);
+}
+
 // Add smooth scroll behavior to navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
